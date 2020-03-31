@@ -37,7 +37,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1585688211291,
+  "iteration": 1585691077160,
   "links": [],
   "panels": [
     {
@@ -653,7 +653,7 @@
     ]
   },
   "timezone": "",
-  "title": "Kubernetes Control Plane metrics",
+  "title": "Kubernetes apiserver",
   "uid": "R6abPf9Zz",
-  "version": 2
+  "version": 3
 }
