@@ -37,7 +37,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1585622482595,
+  "iteration": 1585688211291,
   "links": [],
   "panels": [
     {
@@ -171,6 +171,16 @@
           "expr": "histogram_quantile(0.95, sum(rate(workqueue_queue_duration_seconds_bucket[5m])) by (le))",
           "legendFormat": "p95",
           "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.90, sum(rate(workqueue_queue_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p90",
+          "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.5, sum(rate(workqueue_queue_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p50",
+          "refId": "C"
         }
       ],
       "thresholds": [],
@@ -259,6 +269,16 @@
           "expr": "histogram_quantile(0.95, sum(rate(apiserver_request_duration_seconds_bucket{verb!~\"CONNECT|WATCH\"}[5m])) by (le))",
           "legendFormat": "p95",
           "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.90, sum(rate(apiserver_request_duration_seconds_bucket{verb!~\"CONNECT|WATCH\"}[5m])) by (le))",
+          "legendFormat": "p90",
+          "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.5, sum(rate(apiserver_request_duration_seconds_bucket{verb!~\"CONNECT|WATCH\"}[5m])) by (le))",
+          "legendFormat": "p50 ",
+          "refId": "C"
         }
       ],
       "thresholds": [],
@@ -347,6 +367,16 @@
           "expr": "histogram_quantile(0.95, sum(rate(workqueue_work_duration_seconds_bucket[5m])) by (le))",
           "legendFormat": "p95",
           "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.9, sum(rate(workqueue_work_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p90",
+          "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.5, sum(rate(workqueue_work_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p50",
+          "refId": "C"
         }
       ],
       "thresholds": [],
@@ -524,6 +554,16 @@
           "expr": "histogram_quantile(0.95, sum(rate(etcd_request_duration_seconds_bucket[5m])) by (le))",
           "legendFormat": "p95",
           "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.90, sum(rate(etcd_request_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p90",
+          "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.5, sum(rate(etcd_request_duration_seconds_bucket[5m])) by (le))",
+          "legendFormat": "p50",
+          "refId": "C"
         }
       ],
       "thresholds": [],
@@ -546,6 +586,7 @@
       },
       "yaxes": [
         {
+          "decimals": null,
           "format": "s",
           "label": "latency",
           "logBase": 1,
@@ -614,5 +655,5 @@
   "timezone": "",
   "title": "Kubernetes Control Plane metrics",
   "uid": "R6abPf9Zz",
-  "version": 1
+  "version": 2
 }
